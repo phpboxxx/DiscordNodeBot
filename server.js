@@ -1,5 +1,3 @@
-//  OpenShift sample Node application
-require('openshift-uptimer').auto_configure();  // Done!
 
 
 var express = require('express'),
@@ -107,5 +105,10 @@ initDb(function(err){
 
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
+
+
+var uptimer = require('openshift-uptimer');
+uptimer.set_express(app);
+uptimer.set_uptime_route('/uptime_route');
 
 module.exports = app ;
