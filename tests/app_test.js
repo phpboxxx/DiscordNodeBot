@@ -31,6 +31,4 @@ describe('Basic routes tests', function() {
 })
 
 
-require('openshift-uptimer').auto_configure();  // Done!
-
 

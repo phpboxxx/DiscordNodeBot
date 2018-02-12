@@ -1,4 +1,7 @@
 //  OpenShift sample Node application
+require('openshift-uptimer').auto_configure();  // Done!
+
+
 var express = require('express'),
     app     = express(),
     morgan  = require('morgan');
